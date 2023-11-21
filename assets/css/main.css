@@ -108,7 +108,6 @@ section.previews {
 	outline: 0.3rem solid transparent;
 	border-radius: 1rem;
 	transition: transform 0.7s ease-in-out, outline 0.7s ease-in-out;
-	position: relative;
 	background-size: cover;
 }
 
@@ -190,8 +189,10 @@ section.previews {
 	.previews__container {
 		grid-template-columns: repeat(6, 100%);
 		grid-auto-flow: column;
-		overflow: auto hidden;
 		gap: 3rem;
+
+		justify-content: flex-start;
+		overflow: auto hidden;
 	}
 
 	.card__title {
