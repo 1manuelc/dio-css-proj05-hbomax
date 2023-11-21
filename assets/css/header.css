@@ -1,0 +1,121 @@
+:root {
+	--divider-bg-color: linear-gradient(
+		90deg,
+		#5516ba,
+		rgba(255, 0, 229, 0.5) 80%
+	);
+}
+
+header {
+	position: relative;
+	height: 85vh;
+	margin-top: calc(5rem + 1rem);
+	padding: 0 2rem 6rem 2rem;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+
+	background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+	background-size: 400% 400%;
+	animation: header-gradient 8s ease-in-out infinite alternate;
+}
+
+header::after {
+	height: 35rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+
+	content: "";
+	background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header__logos {
+	padding: 0 4rem;
+	margin-top: 6rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	flex-flow: row wrap;
+}
+
+.header__title {
+	padding: 0 4rem;
+
+	text-transform: uppercase;
+	font-size: 4.6rem;
+	text-align: center;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__title--light {
+	text-align: center;
+	font-size: 3.4rem;
+	font-weight: 400;
+}
+
+.header__divider {
+	padding: 0.3rem 0;
+	border-radius: 6rem;
+
+	width: 45vw;
+	background: var(--divider-bg-color);
+}
+
+.header__subtitle {
+	z-index: 1;
+}
+
+.header__subtitle h2 {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 400;
+}
+
+.header__subtitle span.header__price {
+	font-size: 4rem;
+	font-weight: 800;
+}
+
+.header__addinfo {
+	max-width: 30rem;
+	z-index: 1;
+
+	font-size: 1.6rem;
+	font-weight: 400;
+	padding-top: 2rem;
+	text-align: center;
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 480px) {
+	header {
+		margin-top: 11.3rem;
+	}
+
+	.header__logos {
+		padding: 18rem 4rem 0 4rem;
+	}
+}
+
+@keyframes header-gradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}

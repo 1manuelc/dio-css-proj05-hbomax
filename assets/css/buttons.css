@@ -1,0 +1,122 @@
+:root {
+	--btn-bg-color-gradient: linear-gradient(
+		45deg,
+		#9b34ef 0%,
+		#490cb0 20%,
+		transparent 50%
+	);
+	--secondary-color: #ff00e5;
+}
+
+.menu__button {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.menu__item--buttons {
+	display: flex;
+	align-items: center;
+}
+
+.menu__item--buttons a:nth-child(1) {
+	margin-right: 2.4rem;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.menu__item--buttons a:nth-child(1):hover {
+	opacity: 0.5;
+}
+
+.menu__item--buttons a:nth-child(2) {
+	padding: 0.8rem 2.6rem;
+	color: var(--text-color);
+	background: var(--tertiary-color);
+	border-radius: 10rem;
+	transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.menu__item--buttons a:nth-child(2):hover,
+.menu__item--buttons a:nth-child(2):active {
+	color: var(--primary-color);
+	background: var(--text-color);
+}
+
+.footer__button {
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1.4rem;
+	letter-spacing: 0.2rem;
+
+	color: var(--link-color);
+	transition: color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.footer__button:hover,
+.footer__button:active {
+	color: var(--text-color);
+	filter: brightness(4);
+}
+
+.button__gradient {
+	padding: 1.6rem 4rem;
+
+	background: var(--btn-bg-color-gradient);
+	background-size: 250%;
+	border-radius: 4rem;
+	outline: 0.2rem solid transparent;
+
+	text-decoration: none;
+	color: var(--text-color);
+	transition: background 0.6s ease-in-out, outline 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.button__gradient h3 {
+	font-size: calc(1.4rem + 0.1vw);
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.3rem;
+}
+
+.button__gradient--wiggle {
+	animation: wiggle 2s linear infinite forwards 2s;
+}
+
+.button__gradient:hover {
+	background-position: -30rem;
+	outline: 0.2rem solid var(--secondary-color);
+}
+
+.button--scale:hover {
+	transform: scale(1.05);
+	background-position: -50rem;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	15% {
+		transform: rotate(-7deg);
+	}
+	20% {
+		transform: rotate(5deg);
+	}
+	25% {
+		transform: rotate(-5deg);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	35% {
+		transform: rotate(-5deg);
+	}
+	40%,
+	100% {
+		transform: rotate(0deg);
+	}
+}
