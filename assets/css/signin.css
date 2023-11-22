@@ -1,0 +1,126 @@
+@import url(styles.css);
+
+:root {
+	--form-bg-color: rgba(211, 211, 211, 0.06);
+	--form-field-bg-color: rgba(0, 0, 0, 0.2);
+	--form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+	--form-field-placeholder: rgba(255, 255, 255, 0.7);
+	--form-field-error: rgb(255, 76, 76);
+	--form-field-accept: rgb(76, 255, 82);
+	--text-color: #fff;
+}
+
+main .button--gradient:hover {
+	background-position: -15vmax;
+}
+
+body {
+	background-image: url("../images/background-movies-series.png");
+	background-size: 120%;
+	background-repeat: no-repeat;
+	z-index: -2;
+	position: relative;
+}
+
+body::after {
+	height: 45rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+
+	content: "";
+	background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+main {
+	height: 54vh;
+	margin-top: 6rem;
+}
+
+.login__container {
+	height: 100%;
+	width: 50%;
+	padding: 4rem;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+
+	border-radius: 1rem;
+	background-color: var(--form-bg-color);
+}
+
+.login__container h2 {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.3rem;
+}
+
+.login__form {
+	width: 100%;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.login__field {
+	width: 95%;
+	padding: 1.6rem;
+
+	border-radius: 0.8rem;
+	background-color: var(--form-field-bg-color);
+	border: var(--form-field-border);
+	color: var(--text-color);
+	accent-color: var(--text-color);
+	font-size: 1.6rem;
+}
+
+.login__field::placeholder {
+	color: var(--form-field-placeholder);
+}
+
+.login__field:invalid {
+	border: var(--form-field-error) 0.1rem solid;
+}
+
+.login__buttons {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2.4rem;
+}
+
+@media screen and (max-width: 800px) {
+	.login__buttons {
+		flex-flow: column;
+	}
+
+	.login__container {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	main {
+		margin-top: 14rem;
+	}
+}
+
+.button__gradient h3,
+.footer__button {
+	font-size: 1.4rem;
+}
+
+.footer__button {
+	font-size: 1.6rem;
+	text-transform: none;
+	letter-spacing: normal;
+}

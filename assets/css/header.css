@@ -28,7 +28,6 @@ header::after {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	z-index: 0;
 
 	content: "";
 	background: linear-gradient(0deg, var(--primary-color), transparent);
@@ -89,7 +88,6 @@ header::after {
 
 .header__addinfo {
 	max-width: 30rem;
-	z-index: 1;
 
 	font-size: 1.6rem;
 	font-weight: 400;
