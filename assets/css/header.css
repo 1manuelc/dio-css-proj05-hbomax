@@ -10,7 +10,7 @@ header {
 	position: relative;
 	height: 85vh;
 	margin-top: calc(5rem + 1rem);
-	padding: 0 2rem 6rem 2rem;
+	padding: 4rem;
 
 	display: flex;
 	flex-flow: column;
@@ -24,7 +24,7 @@ header {
 }
 
 header::after {
-	height: 35rem;
+	height: 45rem;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -34,9 +34,6 @@ header::after {
 }
 
 .header__logos {
-	padding: 0 4rem;
-	margin-top: 6rem;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -96,13 +93,15 @@ header::after {
 	opacity: 0.5;
 }
 
+@media screen and (max-width: 800px) {
+	header {
+		padding: 6rem 0 6rem;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	header {
 		margin-top: 11.3rem;
-	}
-
-	.header__logos {
-		padding: 18rem 4rem 0 4rem;
 	}
 }
 

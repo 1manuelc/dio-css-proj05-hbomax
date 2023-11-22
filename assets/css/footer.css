@@ -1,6 +1,5 @@
 footer {
-  padding: 4rem;
-
+	padding: 4rem;
 	display: flex;
 	flex-flow: column;
 	gap: 6rem;
@@ -18,7 +17,7 @@ footer {
 
 .footer__links {
 	display: flex;
-  flex-flow: row wrap;
+	flex-flow: row wrap;
 	gap: 3rem;
 	justify-content: center;
 	align-items: center;
@@ -27,7 +26,7 @@ footer {
 .footer__rights {
 	font-size: 1.3rem;
 	color: var(--link-color);
-  text-align: center;
+	text-align: center;
 }
 
 .footer__socialmedia {
