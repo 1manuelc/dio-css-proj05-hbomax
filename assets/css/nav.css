@@ -31,4 +31,8 @@ nav.menu {
 		justify-content: center;
 		gap: 1.6rem;
 	}
+
+	.menu__logo img {
+		width: 12rem;
+	}
 }

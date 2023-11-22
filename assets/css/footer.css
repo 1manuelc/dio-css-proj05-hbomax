@@ -39,3 +39,9 @@ footer {
 .footer__socialmedia a img {
 	height: 2.2rem;
 }
+
+@media screen and (max-width: 480px) {
+	.footer__links {
+		flex-flow: column nowrap;
+	}
+}
